@@ -1,0 +1,19 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"yarn run client\" \"yarn run server\"",
+    "start:dev": "concurrently \"yarn run client:dev\" \"yarn run server:dev\"",
+    "client": "cd client && yarn run start",
+    "client:dev": "cd client && yarn run dev",
+    "server": "cd server && yarn run start",
+    "server:dev": "cd server && yarn run start:dev",
+    "server:debug": "cd server && yarn run start:debug"
+  },
+  "author": "Chris <jantzeca@mail.uc.edu>",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^6.2.1"
+  }
+}

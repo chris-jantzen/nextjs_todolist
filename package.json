@@ -1,19 +1,20 @@
 {
-  "name": "todolist",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "start": "concurrently \"yarn run client\" \"yarn run server\"",
-    "start:dev": "concurrently \"yarn run client:dev\" \"yarn run server:dev\"",
-    "client": "cd client && yarn run start",
-    "client:dev": "cd client && yarn run dev",
-    "server": "cd server && yarn run start",
-    "server:dev": "cd server && yarn run start:dev",
-    "server:debug": "cd server && yarn run start:debug"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "author": "Chris <jantzeca@mail.uc.edu>",
-  "license": "MIT",
   "dependencies": {
-    "concurrently": "^6.2.1"
+    "next": "11.1.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.1.0"
   }
 }

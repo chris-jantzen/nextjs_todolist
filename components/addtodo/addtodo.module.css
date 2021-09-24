@@ -1,0 +1,26 @@
+.addTodo {
+  height: 3rem;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #ccc;
+  border-bottom: none;
+}
+
+.todoInput {
+  padding: 0.25rem 0.5rem;
+  border: none;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.add {
+  height: 100%;
+  width: 60px;
+  min-width: 60px;
+  background: black;
+  color: #ccc;
+  border: none;
+  cursor: pointer;
+}

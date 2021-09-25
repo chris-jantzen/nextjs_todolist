@@ -4,8 +4,9 @@ import { TodoContextProvider } from '../store/todoStore';
 import TodoList from '../components/todolist/todolist';
 import styles from '../styles/home.module.css';
 import AddTodo from '../components/addTodo/addTodo';
+import axios from 'axios';
 
-export default function Home() {
+export default function Home({ todos }) {
   return (
     <Layout home>
       <Head>
@@ -14,13 +15,19 @@ export default function Home() {
       <h2 className={styles.header}>Todos</h2>
       <TodoContextProvider>
         <AddTodo />
-        <TodoList />
-        {/* Add Todo Component */}
-        {/*
-          Todo List Component
-          // Click on a todo item to go to an individual todo view
-        */}
+        <TodoList todos={todos} />
       </TodoContextProvider>
     </Layout>
   );
 }
+
+export async function getStaticProps() {
+  const res = await axios.get(`${process.env.BASE_URL}/todo`);
+  const todos = await res.data;
+  return {
+    props: {
+      todos,
+    },
+  };
+}
+

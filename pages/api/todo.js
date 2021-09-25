@@ -1,4 +1,4 @@
-import connectDB from '../../middleware/mongodb';
+import connectDB from '../../lib/mongodb';
 import { Todo } from '../../models/todo';
 
 async function handler(req, res) {
